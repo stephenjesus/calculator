@@ -177,3 +177,25 @@
     align-items: center;
     margin-bottom: 10% !important;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+  .sidebar {
+    display: none;
+  }
+  .MainFormLayout {
+    margin-left: 0% !important;
+    
+  }
+  .formLayoutBox {
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+  .headbar {
+    width: 100% !important;
+  }
+  .inputDate {
+    width: 100% !important;
+  }
+}

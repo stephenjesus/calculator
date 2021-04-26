@@ -2,9 +2,11 @@ import React from 'react';
 
 import { Helmet } from "react-helmet";
 
+const logo = `https://onlinedevtools.in/assets/img/angular.png`;
+
 export const renderMetaTag = (seoMetaTagData) => {
 
-    const { title , description } = seoMetaTagData;
+    const { title , description , keywords } = seoMetaTagData;
 
     return <Helmet>
 
@@ -14,7 +16,7 @@ export const renderMetaTag = (seoMetaTagData) => {
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta charSet="utf-8" />
-        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Stephen Prakash" />
         <meta name="publisher" content="DEV Blogger" />
         <meta name="robots" content="all" />
@@ -26,13 +28,13 @@ export const renderMetaTag = (seoMetaTagData) => {
         <meta property="og:url" content={`${window.location.href}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://onlinedevtools.in/assets/img/angular.png" />
+        <meta property="og:image" content={logo} />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`${window.location.href}`} />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="https://onlinedevtools.in/assets/img/angular.png"></meta>
+        <meta property="twitter:image" content={logo}></meta>
     </Helmet>
 }

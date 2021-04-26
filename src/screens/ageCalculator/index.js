@@ -13,7 +13,7 @@ class AgeCalculator extends Component {
         day_age: null,
         congrats: false
     }
-    addDate = (date) => {
+    calculateAge = (date) => {
         var mDate = date.toString();
         var yearThen = parseInt(mDate.substring(0, 4), 10);
         var monthThen = parseInt(mDate.substring(5, 7), 10);
@@ -41,29 +41,36 @@ class AgeCalculator extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         let birthday = document.getElementById('birthday').value;
-        this.addDate(birthday);
+        this.calculateAge(birthday);
     }
+
     render() {
         return (
             <div className="MainFormLayout">
                 {renderMetaTag({
                     title: "AGE Calculator Online",
-                    description: "Age calculator is online tool to calculate age from date of birth to current date"
+                    description: "Age calculator is online tool to calculate age from date of birth to current date",
+                    keywords: "age calculator , online calculator"
                 })}
-                <div className="formLayoutBox">
-                    <h1 className="textCenter">AGE Calculator Online</h1>
-                    <div onSubmit={this.handleSubmit} className="form-inline">
-                        <div className="form-group flexColum">
-                            <input id="birthday" type="date" className="form-control inputDate" onChange={this.handleSubmit} />
-                            <button type="submit" className="btn btn-default submitButton" >Submit</button>
-                        </div>
-                    </div>
-                    { this.state.congrats && <div className="fade age-state">  <Congrats date={this.state} /></div>}
-                </div>
+                {this.renderFormLayout()}
             </div>
-
         );
     }
+
+    renderFormLayout = () => {
+        return <div className="formLayoutBox">
+            <h1 className="textCenter">AGE Calculator Online</h1>
+            <div onSubmit={this.handleSubmit} className="form-inline">
+                <div className="form-group flexColum">
+                    <input id="birthday" type="date" className="form-control inputDate" onChange={this.handleSubmit} />
+                    <button type="submit" className="btn btn-default submitButton" >Submit</button>
+                </div>
+            </div>
+            {this.renderCongratsBox()}
+        </div>
+    }
+    renderCongratsBox = () => this.state.congrats && <div className="fade age-state">  <Congrats date={this.state} /></div>
+
 }
 
 export default AgeCalculator;

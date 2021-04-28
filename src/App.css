@@ -142,7 +142,7 @@
     cursor: pointer;
     width: 500px !important;
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 2%;
   }
 
   .submitButton {
@@ -178,6 +178,17 @@
     margin-bottom: 10% !important;
 }
 
+.form-label {
+  text-align: left;
+  font-size: 15px;
+  width: 500px !important;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  margin-bottom: 5% !important;
+}
 
 @media only screen and (max-width: 768px) {
 

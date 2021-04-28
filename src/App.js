@@ -8,6 +8,8 @@ import SideBar from '../src/components/sidebar';
 
 import AgeCalculator from '../src/screens/ageCalculator/index';
 
+import LevenshteinDistance from './screens/levenshteinDistance/index';
+
 class App extends Component {
 
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path="/age-calculator" component={AgeCalculator} />
+            <Route path="/levenshtein-distance" component={LevenshteinDistance} />
           </Switch>
         </BrowserRouter>
       </div>

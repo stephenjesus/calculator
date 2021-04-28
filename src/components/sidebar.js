@@ -3,10 +3,11 @@ import React, { Fragment } from 'react'
 // FontAwesomeIcon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { faUser, faSnowflake, faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSnowflake, faTachometerAlt , faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 const menuItem = [
   { name: 'Age Calculator', path: '/age-calculator', icon: faTachometerAlt },
+  { name: 'Levenshtein Distance', path: '/levenshtein-distance', icon: faLaptop },
   { name: 'Wealth Calculator', path: '/wealth-calculator', icon: faSnowflake },
   { name: 'EMI Calculator', path: '/emi-calculator', icon: faUser },
   { name: 'Home Load Calculator', path: '/home-loan-calculator', icon: faUser }

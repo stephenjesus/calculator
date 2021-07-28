@@ -10,7 +10,7 @@ const menuItem = [
   { name: 'Levenshtein Distance', path: '/levenshtein-distance', icon: faLaptop },
   { name: 'Wealth Calculator', path: '/wealth-calculator', icon: faSnowflake },
   { name: 'EMI Calculator', path: '/emi-calculator', icon: faUser },
-  { name: 'Home Load Calculator', path: '/home-loan-calculator', icon: faUser }
+  { name: 'Home Loan Calculator', path: '/home-loan-calculator', icon: faUser }
 ];
 
 export default function SideBar() {

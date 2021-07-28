@@ -22,10 +22,6 @@ export const renderMetaTag = (seoMetaTagData) => {
         <meta name="robots" content="all" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href={`${window.location.href}`} />
-        
-        {/* www.actyv.com 
-        https://www.actyv.com
-        actyv.com */}
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
